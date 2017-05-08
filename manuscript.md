@@ -1,4 +1,4 @@
-# The future of science: Good or bad?
+# Envisioning a future in scholarly communication
 
 __For the 2017 IFLA conference, theme: The Open Revolution__
 
@@ -12,7 +12,9 @@ Scholarly communication is in dire need of disruption. <!-- Many say we need inc
 
 In the last decades, interpersonal communication has changed tremendously. <!-- These past decades have brought with it so much diversity in communication that it can become confusing (see [Figure 1](#fig1)), but it is also liberating by allowing innovative ways to communicate (e.g., social media) or making available previously difficult to use safety measures (e.g., encryption).  -->
 
-<!-- Insert R chunk for figure 1 here -->
+```{r xkcd-1810, fig.cap="A comical example of the diversity in communication channels.", echo = FALSE}
+knitr::include_graphics('figs/xkcd-1810.png', auto_pdf = TRUE)
+```
 
 However, the way scholars communicate their findings has barely changed. <!-- remaining stuck in a paper paradigm. despite the potential we have seen in digital communications on all other interpersonal levels. Despite these developments in communication at a personal level,  l having massive effects on the way we communicate on a personal level and during our day-to-day work as scholars, we have not realized the potential of scholarly communication in the digital age - we still produce in a paper format, albeit digitized.  -->
 
@@ -50,10 +52,6 @@ Decentralization is achievable with new peer-to-peer (p2p) Internet protocols su
 
 Such p2p networks also allow for ready redistribution when copyright is leveraged to work for distribution.
 
-For a sustainable distribution system, persistent nodes need to be identified: libraries.
-
-Nonetheless, other stakeholders benefiting from maintaining the distribution of the decentralized network are (not-)for-profit companies that build services on top of the resources.
-
 Alongside decentralization and distribution, integrity of the scholarly record can also become better. The chronology of the scholarly process can be ensured by splitting up the paper article as we know it into nodes of information.
 
 These nodes can easily be logged on a blockchain based ledger of which everyone can have a copy (e.g., [Hyperledger](https://github.com/hyperledger/fabric)-based). <!-- An example is available below -->
@@ -67,6 +65,7 @@ These nodes can easily be logged on a blockchain based ledger of which everyone 
 	"authors": "b601f276870ebf4920b3c78c4af51d3ed3bf4db7ab2b9c4faa74e0b457aa13ed",
 	"type": "hypotheses"
 }
+
 {
 	"parent": "dat://92b9b1b95e18c1dd1546c25ac49609da6fb0e3f2abc94ecf17609c565888c16b",
 	"self": "dat://c2c291f93fa635c7fc7bc6e8ba504937b1821c5be45ab7c859f6e6cd19a291b7",
@@ -83,7 +82,12 @@ The ledger can also allow for time-locked sharing but with a clear chronology of
 
 Combinations of ORCIDs can be hashed into unique author combinations (and ordering!) to provide identification over time, but remove gender and status bias (amongst other things).
 
-What types are available for the ledger, is something that requires discussion and can change over time.
+What types of nodes are contained in the ledger, is something that requires discussion and can change over time.
+
+For a sustainable distribution system, persistent nodes need to be identified: libraries.
+
+Nonetheless, other stakeholders benefiting from maintaining the distribution of the decentralized network are (not-)for-profit companies that build services on top of the resources.
+
 
 ## Locking the system open
 
