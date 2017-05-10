@@ -1,14 +1,16 @@
 ---
-title: "Renvisioning a future in scholarly communication"
-author: "CHJ Hartgerink"
-date: "`r Sys.Date()`"
-output: html_document
-toc: true
-fig_caption: true
+title: "Re-envisioning a future in scholarly communication"
+author: "Chris H.J. Hartgerink"
+date: '`r Sys.Date()`'
+output:
+  html_document:
+    includes:
+      in_header: hypothesis.html
+fig_caption: yes
 bibliography: library.bib
 ---
 
-__For the 2017 IFLA conference, theme: The Open Revolution__
+__For the 2017 IFLA conference, theme: Being open about open__
 
 ## Abstract
 
@@ -16,56 +18,60 @@ __For the 2017 IFLA conference, theme: The Open Revolution__
 
 ## Body
 
-Scholarly communication is in dire need of disruption. People often tell me we need incremental change from within to produce a sustainable, modern scholarly communication system, but I oppose this idea. After decades of identifying various problems we have seen little sustainable change that truly and deeply reimagines how we communicate. Yes, PLOS changed the game. Yes, RIO journal is one of the most innovative ideas in scholarly communication of the last two years. But we are still trying to turn a horse (i.e., paper based communication) into a motor vehicle (i.e., the new thing).
+Scholarly communication is in (dire) need of disruption. Subscription costs to scholarly journals are untenable already [e.g., @harvard-serials-crisis] and will become even more untenable in the long run [i.e., serials crisis; @serials-crisis]. The current scholarly incentive system detracts validity instead of adding it [e.g., @10.1371/journal.pmed.0020124;@10.1371/journal.pmed.0050201] by promoting behavior that is antithetical to the norms of science [@merton1942;@10.2307/2094423;@10.1525/jer.2007.2.4.3]. Results cannot systematically be verified because data are rarely shared [e.g., @10.1038/nature.2017.21549;@10.1525/collabra.13;@10.1037/0003-066x.61.7.726] or preserved [@10.1016/j.cub.2013.11.014]. Widely publicized results regularly fail reproducibility tests [e.g., @10.1126/science.aac4716;@10.1038/483531a;@10.1038/541269a, but see also @10.1016/j.jesp.2015.10.001], in part because published results are highly pre-selected for unscientific reasons [e.g., @10.1016/j.tree.2013.05.007;@10.1038/526182a;@10.1126/science.1255484;@10.1016/0140-6736(91)90201-Y
+]. These problems are not new but they are also not absolute --- scholars want to behave in accordance with the scientific norms [@10.1525/jer.2007.2.4.3] but the system seems to encourage us to do the opposite.
 
-In this perspective piece, I try to radically reimagine the scholarly communications infrastructure based on the tools that are available to us now.  I want these ideas to be criticized; only with diversity of ideas can we truly make progress. Currently the decisions are driven by a few oligopolies [@10.1371/journal.pone.0127502] or the tenured professors, the policymakers, and other people who are actually farthest removed from doing actual research. Many of these people stem from a different generation and have become successful in the broken system we are now stuck with. As a result, they might underestimate some of the problems we now face. This inherently decreases the diversity of ideas and stalls the development of how scholars communicate, with dire consequences (as we noticed in recent years, with unfounded and unconstructive criticisms of replication initiatives). 
+In this perspective piece, I try to radically reimagine the scholarly communications infrastructure based on the digital tools that are available to us now, instead of the analog era and its legacies. I thoroughly believe that the Mertonian norms in science [@merton1942] align perfectly with transparency in science [see also @10.14293/s2199-1006.1.sor-socsci.arysbi.v1] and that a scholarly communications system can be built on this framework in a sustainable manner. I invite everyone to criticize these ideas, for only with diversity of ideas can we truly make progress. Currently the decisions are driven by a few oligopolies [@10.1371/journal.pone.0127502] or the highly pre-selected sample of tenured professors and policymakers, who mostly stem from the generation that has created this broken system. As a result, they are likely to underestimate the problems we now face and cannot be expected to intervene in the ways that are necessary.
 
-In the last decades, interpersonal communication has changed tremendously. These past decades have brought with it much diversity in communication, such that it can become confusing (see Figure 1). At the same time, the diversity is liberating by allowing innovative ways to communicate (e.g., social media) or making available previously difficult to use safety measures (e.g., encryption). Diversity has thus spawned new ways of communicating or have made previously esoteric communication tools available to the masses.
+In the last decades, interpersonal communication has changed tremendously. Not only has it brought much diversity in communication, so much diversity has come into existence that it has become confusing (see Figure 1). At the same time, that same diversity has liberated us by allowing innovative ways to communicate (e.g., social media) or making available previously difficult to use safety measures easily accessible to the masses (e.g., encryption). Diversity in communication-channels has thus spawned new ways of communicating.
 
 ```{r xkcd-1810, fig.cap="_Figure 1._ A comical example of the diversity in communication channels.", out.width="60%", fig.align="center", echo = FALSE}
 knitr::include_graphics('figs/xkcd_1810-cc-by-nc-2_5.png', auto_pdf = TRUE)
 ```
 
-However, the way scholars communicate their findings has barely changed; we are still stuck in a paper paradigm, albeit writing on digital pages. In recent years, options have started to arise with tools such as [Rmarkdown]() and [Jupyter notebooks]() to break free from this paper paradigm. However, in the end, the scholarly communications system as we now know it still requires submitting to a journal that fits all of it back into a page-by-page, static, and paper format. This not only prevents new ways of communicating findings, it also prevents encouragement of discussion amongst readers about the findings, but to passively consume. Not to even start of the antiquated and wholly redundant process of waiting for the article to be assigned an issue number.
+However, the way scholars communicate their findings has barely changed; we are still stuck in a paper paradigm, albeit writing digital pages. Such digital pages radically restrict the way we imagine our communication of results. In recent years, options to break free from this paper paradigm have arisen with tools such as [Rmarkdown](http://rmarkdown.rstudio.com/) or [Jupyter notebooks](https://jupyter.org/). These options allow the user to include code to dynamically generate figures, tables, or values in the text. By extension, how data are cleaned and analyzed can also be included as part of a manuscript for co-authors to verify or readers to discuss [see also @elife-rmd]. Moreover, interactive elements can be embedded, such as interactive figures, online applications, or videos. The current scholarly communications system still requires submitting to a journal that fits all of that back into a page-by-page, static, and paper format without all of these options. This bottleneck not only prevents new ways of communicating findings, it also prevents further encouragement of discussion amongst readers about the findings. As a result, the current system encourages scholars to passively consume findings instead of critically evaluating them.
 
-The scholarly process is much more complicated than can be captured in a static and retrospective publication. For example, a quantitative scholar needs to develop methods to investigate a research question. Feedback from peers would be valuable at that point. This has slowly been picked up with so called [Registered Reports](). However, this is more the exception than the norm. Additionally, researchers create materials, protocols, and other outputs during the research process that now are not (aptly) sharable in a static publication. 
+The scholarly process is much more complicated than can be captured in a single static and retrospective publication. The previously mentioned interactive elements enrich a single publication, but multiple moments of communicating ideas and results maps the empirical cycle onto the communication process. For example, a quantitative scholar needs to develop methods to investigate a research question. Feedback from peers would be valuable at that point. With so called Registered Reports [@10.1016/j.cortex.2012.12.016] a two-staged submission process is introduced to move away from a single static publication by allowing selected peers to discuss the contents at an interim stage. Additionally, this ensures chronology of predictions such as pre-registrations aim to do [@10.1038/s41562-016-0021], but in a more natural way. Currently, pre-registration and data sharing are for the proactive, hence, remain the exception rather than the norm [@10.1371/journal.pbio.1002456], while these are already implicitly part of how scholarly research is conducted. Additionally, researchers create materials, protocols, and other outputs during the research process that now are not (aptly) sharable in a static publication. If the scholarly research process has more moments of communication, these implicit parts are finally able to show themselves 
 
-The scholarly process has also grown even _more_ complicated due to increased variation in the research tools available. Point and click software has increased the number of statistical analyses a researcher can do within minutes; the development of technology has created new types of data output that greatly exceed human comprehension and require algorithms before being able to make sense of the data (e.g., fMRI data). How a researcher applies all these tools is essential, but the current scholarly communication system does not require the details. Lack of direct reproducibility of results [e.g., @10.1101/056473] therefore is no surprise when we do not know how data are processed and analyzed.
+Additionally, the scholarly process has grown more complicated with the rise of research tools available and the speed with which alternative results can be inspected. Point-and-click software has increased the number of statistical analyses a researcher can do within minutes. This increased researcher degrees of freedom to present results that are more in line with previous results, leading to confirmation bias or motivated reasoning [@10.1037/0033-2909.108.3.480], hence, invalid results [@10.1177/0956797611417632]. Moreover, the development of technology has created new types of data output that greatly exceed human comprehension and require algorithms before being able to make sense of the data (e.g., fMRI data). How a researcher applies all these tools is essential, but the current scholarly communication system does not require communication of the details needed to understand what steps were taken. Lack of direct reproducibility of results [e.g., @10.1101/056473] therefore is no surprise when we do not know how data are processed and analyzed. As such, the scholarly process has become more of a black box than it was before because communication has not adapted proportionate to the increasing complexity of the message that needs to be communicated. Increasing complexity and lack of transparency makes it increasingly difficult to reproduce steps taken, simply due to an increasing garden of forking paths [@10.1511/2014.111.460]. 
 
-As such, the scholarly process has become _more_ of a black box than it was before. Increasing complexity and lack of transparency makes it very difficult to reproduce steps. It is similar to being dropped in the middle of a desert with a blindfold on, and then being asked to find your way back home. Moreover, much of the software is proprietary and it is simply impossible to verify results or understand how they originated [@10.1038/nature10836]. Trying to reverse engineer these pieces of software is actually often illegal based on the unilateral agreement that you have to accept before using the software. As such, it is practically impossible to understand how software development affects how results are computed, while testing for this is easy with open-source software.
-<!-- Dit moet nog herschreven worden -->
+<!-- Moreover, much of the software is proprietary and it is simply impossible to verify results or understand how they originated [@10.1038/nature10836]. Trying to reverse engineer these pieces of software is actually often illegal based on the terms of service agreement that you have to accept before using the software. As such, it is practically impossible to understand how software development affects how results are computed, while testing for this is easy with open-source software. -->
 
-Due to these problems, breaking up the reign of the paper paradigm is a necessity to better represent and understand how scholarly results come into existence. Of course paper is a valid medium and should not be neglected, but this is not the case when scholarly communications becomes truly digitally born. PDF versions of outputs can still be produced.
+Due to the fact that these complexities currently cannot and therefore are not reported, breaking the reign of the paper paradigm is a necessity to better represent and understand how scholarly results come into existence. Static paper publicatoin remains a valid communication medium and it is not made obsolete when scholarly communications become truly digitally born and continuous. PDF versions of outputs can still be produced if a paper format is suitable or desirable. However, it is easy to imagine videos being embedded for protocols to be easily clarified (having "Video X" alongside "Figure X" and "Table X", for example) by origin, to then be replaced by stills when a paper version is produced. Nonetheless, without shifting the main focus from paper-based to digital-based scholarly communication, we cannot break free from the legacies of the paper paradigm. Paper-based communication includes the legacy of printing research outputs by default, which by extension includes the idea of subscriptions, purchasing content, and restricting the flow of information. Copyright is the legacy of the paper-based age that seems to limit the digital potential of the outputs. As such, the legacy of a paper-based paradigm is that of knowledge commodification.
 
-Additionally, the way we organize scholarly communication cannot break free from the legacies if we do not radically reenvision it. due to the commodification of the resource (i.e., knowledge), a new system where ways to consume information is commodified are actively stifled.
+For scholarly communications, commodifying knowledge as it is currently done can be seen as a human rights violation. The Universal Declaration of Human Rights (UDHR), Article 27 section 1, reads as follows
+> Everyone has the right freely to participate in the cultural life of the community, to enjoy the arts and to share in scientific advancement and its benefits.
+When knowledge is commodified, it results in decreased participation, enjoyment, and sharing of scholarly progress. It could therefore be argued that this is a violation of human rights [@udhr]. Moreover, this is the main legal motivation proposed by Alexandra Elbakyan as to why [Sci-Hub](http://sci-hub.bz) is not illegal from her point of view [@alexandraelbakyan]. Legal cases on this could result in clarification of whether unauthorized sharing, which is part of scholarly culture [@10.1038/545145a], is allowed from a human rights perspective, and whether that would supercede copyright legislation. 
 
-Commodification of consumption greatly encourages society to innovate how people can discover and reuse information. <!-- For Wikipedia alone, one of the greatest resources of uncommodified knowledge, there are tons of applications that allow you to consume that information in various ways on various devices.  -->
+Moreover, commodifying knowledge is not the only way to make scholarly communication sustainable. An alternative is the commodification of how information is consumed, that is, the services that serve the users the content. For example, if all scholarly information is freely available, (not-)for-profit organizations can compete for users who want to sift through that information efficiently. If an algorithm is developed that greatly increases efficiency of finding relevant articles, revenue could be built with usage fees to that service instead of the content. Such a market could create competition in information consumption, which is timely given the information explosion humanity is going through at the moment. A free resource would encourage innovation and competition as to how people can discover and consume that information. 
 
-By focusing on the commodification of consumption instead of commodification of the resource, the problem of access to knowledge can be resolved in a sustainable manner. <!-- Politicians and scholars have been discussing Open Access for at least 15 years. -->
+Consequently, by focusing on the commodification of consumption instead of commodification of the resource, the problem of access to knowledge can be resolved in a sustainable manner. When the consumption is commodified, all service providers benefit from creating the largest pool of resources that is freely available to build their service on. By extension, it shifts the optimal outcome from not sharing (i.e., defecting) to sharing (i.e., cooperating), because it increases the value of their service. This would create a market that stimulates access instead of limiting it, while retaining the potential for revenue. 
 
-Additionally, commodification of consumption removes several perverse incentives from the scholarly system that now produces unreliable knowledge. <!-- For example, innovativeness and surprisingness are criteria upon which articles are currently selected, where those exact some properties increase the probability that the finding is false [@10.1371/journal.pmed.0020124]. -->
+Additionally, commodification of consumption removes several perverse incentives from the scholarly system that now produces unreliable knowledge. For example, innovativeness and surprisingness are criteria upon which articles are currently selected, where those exact some properties increase the probability that the finding is false [@10.1371/journal.pmed.0020124]. When the knowledge is commodified, this makes sense from a business perspective (comparable to news outlets): readers will buy access more to shocking and astounding results. However, when consumption is commodified, this whole incentive is removed and the most valuable resource is the most populated and diverse one. This would allow much more information to be extracted, hence, richer services to be built on top of that resource.
 
-The main tenet underlying the themes of Open Access, Open Data, Open Science, and replication initiatives in scholarly communication is sustainability. <!-- Sustainability of consuming knowledge (Open Access), sustainability of producing reliable knowledge ("reproducibility crisis"), sustainability of The serial crisis indicates that access to knowledge is currently unsustainable (e.g., Harvard cannot even access everything with its massive budget).  -->
-
-In this perspective piece, I propose a redesign of the scholarly communication system that is flexible, decentralized, and distributed, which immediately allows for more sustainability and diversity in the way we consume, produce, and access knowledge.
+The main tenet underlying the themes of Open Access, Open Data, Open Science, and replication initiatives in scholarly communication is sustainability through transparency of the scholarly process in all facets. As I tried to explain in the previous paragraphs, this sustainability can be achieved by recalibrating the fundamental business model of the scholarly communications system. In this perspective piece, I propose a redesign of the scholarly communication system that is flexible, decentralized, distributed, and freely reusable from the start. Such a system would allow for more sustainability and diversity in the way we consume, produce, and access knowledge, which would ultimately benefit everyone who reaps the benefits of scholarly results. 
 
 ## Sustainable scholarly process
 
 Single points of failures make a system vulnerable to outages, (malicious) adjustment of content, or even complete removal of content. <!-- As such, a centralized infrastructure is easier to disrupt than a decentralized or distributed one. The Internet is currently organized in such a way that it is relatively centralized, whereas the Darknet (i.e., an alternative cyberspace) is less centralized and has been found to be more resilient [@10.1103/PhysRevE.95.022313].  -->
 
-The scholarly process is ridden with single or few points of failures and sharing makes this a many points for failure system. <!-- For exactly this reason it is so important that scholars become more transparent about their data, their hypotheses, their results, and the chronology of a. -->
+The scholarly process is ridden with single or few points of failures at the moment. <!-- For exactly this reason it is so important that scholars become more transparent about their data, their hypotheses, their results, and the chronology of a. -->
+
+These points of failures occur at each stage of the scholarly process.
 
 <!-- The scholarly communications system is currently centralized at publisher websites, is insecure, and is not resilient. HTTP(S) because redistribution is frequently by copyright Unrestrictive licensing, such as the Creative Commons BY license, allow for free redistribution and increases persistence. For example, anyone can download the entire corpus of Hindawi right now and if Hindawi would then become inaccessible, the articles would still be available regardless. Copyright creates dependence whereas the lack thereof creates independence. -->
 
-Hence, a sustainable scholarly communications system needs to be both decentralized and distributed.
+In order to remove these failure points, a sustainable scholarly communications system would have to be both decentralized and widely distributed.
 
 Decentralization is achievable with new peer-to-peer (p2p) Internet protocols such as `dat` and `ipfs`. <!-- Such p2p networks send information across the network, but are is resilient to nodes being removed because they operate in mesh network. If 20 peers have the files, removing one from the network does not affect the availability of the files-->
 
 Such p2p networks also allow for ready redistribution when copyright is leveraged to work for distribution.
 
-Alongside decentralization and distribution, integrity of the scholarly record can also become better. The chronology of the scholarly process can be ensured by splitting up the paper article as we know it into nodes of information.
+Alongside decentralization and distribution, integrity of the scholarly record can also improve. The chronology of the scholarly process can be ensured by splitting up the paper article as we know it into nodes of information.
 
-These nodes can easily be logged on a blockchain based ledger of which everyone can have a copy (e.g., [Hyperledger](https://github.com/hyperledger/fabric)-based). <!-- An example is available below -->
+These nodes can easily be logged on a blockchain based ledger (e.g., [Hyperledger](https://github.com/hyperledger/fabric)-based) of which everyone can have a copy. Although explaining the entire operating principle of the blockchain is beyond the scope of this piece, the essence is very simple. Each entry on the blockchain needs to satisfy a predefined mathematical rule [@], which is dependent on the contents of the previous entry in the ledger, the contents of the new entry, and a constant to offset the current entry. Solving this offset for the new entry to satisfy a specific mathematical rule is called 'mining'. However, because the proof of record is dependent on the contents of the previous entry (i.e., block), the chain is broken when the contents of that previous entry are changed. Given that each user has a copy of the entire blockchain, those who have a different chain from the majority of other users are simply rejected. As such, in order to change the ledger, each change would have to be re-verified by the entire network to become verified (for an introduction to the blockchain, see https://www.youtube.com/watch?v=_160oMzblY8).
+
+
 
 ```json
 {
@@ -79,7 +85,7 @@ These nodes can easily be logged on a blockchain based ledger of which everyone 
 
 {
 	"parent": "dat://92b9b1b95e18c1dd1546c25ac49609da6fb0e3f2abc94ecf17609c565888c16b",
-	"self": "dat://c2c291f93fa635c7fc7bc6e8ba504937b1821c5be45ab7c859f6e6cd19a291b7",
+	"self": "/ipfs/QmVLDAhCY3X9P2uRudKAryuQFPM5zqA3Yij1dY8FpGbL7",
 	"time-deposit": "2017-04-12T12:07:06+02:00",
 	"time-available": "2017-08-12T12:07:06+02:00",
 	"authors": "b601f276870ebf4920b3c78c4af51d3ed3bf4db7ab2b9c4faa74e0b457aa13ed",
@@ -87,15 +93,15 @@ These nodes can easily be logged on a blockchain based ledger of which everyone 
 }
 ```
 
-Each entry in the ledger needs to be self-containing and refer to all relevant files.
+Each entry in the ledger needs to be self-containing and refer to all relevant files. The ledger can be platform agnostic.
 
 A parent node can never occur after a child node, 
 
-The ledger can also allow for time-locked sharing but with a clear chronology of creation.
+The ledger can also allow for time-locked sharing but with a clear chronology of creation. Time-locked sharing would require a third-party that can be trusted 
 
-Nodes cannot be made available 
+Nodes cannot be made available
 
-Combinations of ORCIDs can be hashed into unique author combinations (and ordering!) to provide identification over time, but remove gender and status bias (amongst other things).
+Combinations of ORCIDs can be hashed into unique author combinations to provide identification over time, but remove gender and status bias during initial assessment (amongst other things). 
 
 What types of nodes are contained in the ledger, is something that requires discussion and can change over time. Nonetheless, the fact remains that if someone presents results without 
 
