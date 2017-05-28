@@ -1,0 +1,30 @@
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.5.12)  23 MAY 2017 14:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**manuscript.tex
+(./manuscript.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+
+! LaTeX Error: File `tufte-book.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.2 ^^M
+        
+Here is how much of TeX's memory you used:
+ 9 strings out of 495561
+ 123 string characters out of 6186972
+ 45522 words of memory out of 5000000
+ 3387 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 10i,0n,7p,45b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.

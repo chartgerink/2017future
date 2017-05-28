@@ -3,6 +3,7 @@ title: "Re-envisioning a future in scholarly communication"
 author: "Chris H.J. Hartgerink"
 date: '`r Sys.Date()`'
 output:
+  pdf_document: default
   html_document:
     includes:
       in_header: hypothesis.html
